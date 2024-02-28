@@ -1,0 +1,42 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    // ...
+    "plugin:astro/recommended",
+    "eslint:recommended",
+    // "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  // ...
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"],
+        "project": "./tsconfig.eslint.json"
+      },
+      "rules": {
+        // override/add rules settings here, such as:
+        // "astro/no-set-html-directive": "error"
+        // "no-plusplus": "off",
+        // "no-restricted-syntax": [
+        //   "error",
+        //   "ForInStatement",
+        //   "LabeledStatement",
+        //   "WithStatement"
+        // ]
+      }
+    }
+    // ...
+  ]
+}
