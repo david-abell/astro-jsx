@@ -13,11 +13,14 @@
 
 #### vs-code caching problems
 
-Resolutions seem to also work even when changes are reverted and editor restarted as error reappears only after reverting changes, deleting node_modules, and rerunning `npm install`
+Resolutions seem to also work even when changes are reverted and editor restarted as error reappears only after reverting changes. Error only returns after deleting node_modules and rerunning `npm install`
 
-### Astro add react
+### Astro add jsx frameworks
 
 - `npx astro add react` resolves error
+- `npx astro add preact` resolves error
+- `npx astro add solid-js` resolves error
+- `npx astro add vue` does NOT resolve error
 
 ### Add JSX declaration file
 
