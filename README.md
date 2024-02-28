@@ -11,11 +11,13 @@
 
 ## Possible resolutions tested
 
+#### vs-code caching problems
+
+Resolutions seem to also work even when changes are reverted and editor restarted as error reappears only after reverting changes, deleting node_modules, and rerunning `npm install`
+
 ### Astro add react
 
 - `npx astro add react` resolves error
-- also works even when changes are reverted and editor restarted
-  - it appears astro or typescript is crawling `node_modules` for jsx definitions as error reappears only after reverting changes, deleting node_modules, and rerunning `npm install`
 
 ### Add JSX declaration file
 
