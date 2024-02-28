@@ -5,17 +5,17 @@
   // },
   "extends": [
     // ...
-    "plugin:astro/recommended",
     "eslint:recommended",
-    // "plugin:jsx-a11y/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:astro/recommended",
+    // "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked"
   ],
   // ...
-  // "parser": "@typescript-eslint/parser",
-  // "parserOptions": {
-  //   "project": "./tsconfig.eslint.json"
-  // },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
   "overrides": [
     {
       "files": ["*.astro"],
@@ -27,7 +27,9 @@
       },
       "rules": {
         // override/add rules settings here, such as:
-        // "astro/no-set-html-directive": "error"
+        // "astro/no-set-html-directive": "error",
+        // no-plusplus sample rule in action
+        "no-plusplus": "error"
       }
     }
     // ...
