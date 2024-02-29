@@ -8,6 +8,6 @@
     "src/**/*.astro",
     "test/**/*.ts",
     "globals.d.ts",
-    "astro.config.mjs"
+    "jsx.d.ts"
   ]
 }
