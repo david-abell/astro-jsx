@@ -1,21 +1,22 @@
 ---
-interface Props {
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'li'> {
 	title: string;
-	body: string;
 	href: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, class: className = "", children} = Astro.props;
 ---
 
-<li class="link-card">
+<li  class:list={["link-card", className]}>
 	<a href={href}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
 		</h2>
 		<p>
-			{body}
+			<slot>{children}</slot>
 		</p>
 	</a>
 </li>

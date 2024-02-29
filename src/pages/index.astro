@@ -1,4 +1,6 @@
 ---
+import Card from "../components/Card.astro";
+
 let cards = [
   {
     href: "https://docs.astro.build/",
@@ -16,6 +18,11 @@ let cards = [
     body: "Explore a galaxy of community-built starter themes.",
   },
 ];
+
+// no-plusplus just to make sure eslint is running
+for (let i = 0; i<1; i++) {
+  continue
+}
 ---
 
 <html lang="en">
@@ -31,7 +38,7 @@ let cards = [
       {
         cards.map((card) => (
           // next line has following error: Unsafe return of an `any` typed value. eslint(@typescript-eslint/no-unsafe-return)
-          <div>{card.href}</div>
+          <Card title={card.title} href={card.href}>{card.body}</Card>
         ))
       }
     </li>
@@ -39,7 +46,7 @@ let cards = [
       {
         ["a", "b", "c"].map((tag) => (
           <p class={tag}>
-            Tag:{tag} This p tag triggers unsafe return of an `any` typed value.
+            "{tag}" This p tag triggers unsafe return of an `any` typed value.
           </p>
         ))
       }
